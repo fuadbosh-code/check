@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHCSA İmtahan Sualları</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #e4e4e4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #e94560;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(233,69,96,0.5);
+        }
+        .header .subtitle {
+            color: #0f9b0f;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .exam-info {
+            background: rgba(233,69,96,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0 30px 0;
+            text-align: center;
+            border: 2px solid #e94560;
+        }
+        .exam-info h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .exam-info p {
+            font-size: 1.05em;
+            margin: 5px 0;
+        }
+        .question-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e94560;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .question-card:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.07);
+            box-shadow: 0 10px 40px rgba(233,69,96,0.2);
+        }
+        .question-title {
+            color: #00d9ff;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .question-number {
+            background: #e94560;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .question-content {
+            padding-left: 50px;
+            line-height: 1.8;
+        }
+        .question-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .question-content li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .question-content li::before {
+            content: "▸";
+            color: #e94560;
+            position: absolute;
+            left: 0;
+        }
+        .note {
+            background: rgba(15, 155, 15, 0.2);
+            border-left: 3px solid #0f9b0f;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        .code {
+            background: rgba(0,0,0,0.4);
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #ffd700;
+            font-size: 0.95em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8em; }
+            .question-content { padding-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐧 RHCSA İmtahan Sualları</h1>
+            <p class="subtitle">Red Hat Certified System Administrator – Praktiki Tapşırıqlar</p>
+        </div>
+
+        <div class="exam-info">
+            <h3>📊 İmtahan Ümumi Məlumat</h3>
+            <p><strong>Sualların sayı:</strong> 20</p>
+            <p><strong>Mühit:</strong> RHEL əsaslı sistem, root səlahiyyətləri mövcuddur</p>
+        </div>
+
+        <!-- Sual 1 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">1</span>
+                Şəbəkə Konfiqurasiyası
+            </div>
+            <div class="question-content">
+                <p>Serverdə aşağıdakı parametrlərlə statik (manual) şəbəkə konfiqurasiyası aparın. Burada <span class="code">x.x.x</span> sizin NAT şəbəkənizin ilk üç oktetidir.</p>
+                <ul>
+                    <li>Hostname: <span class="code">exam.rhcsa.local</span></li>
+                    <li>IP Address: <span class="code">x.x.x.199</span></li>
+                    <li>Netmask: <span class="code">255.255.255.0</span></li>
+                    <li>Gateway: <span class="code">x.x.x.2</span></li>
+                    <li>Primary Nameserver: <span class="code">x.x.x.2</span></li>
+                    <li>Secondary Nameserver: <span class="code">1.1.1.1</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 2 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">2</span>
+                Local Repository Yaradılması
+            </div>
+            <div class="question-content">
+                <p>Sistemdə aşağıdakı lokal YUM/DNF repository-ləri konfiqurasiya edin. Repository-lər daimi olaraq əlçatan olmalıdır (əgər disk və ya ISO istifadə olunursa, daimi mount təmin edin).</p>
+                <ul>
+                    <li><span class="code">file:///Exam/Repo/BaseOS</span></li>
+                    <li><span class="code">file:///Exam/Repo/AppStream</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 3 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">3</span>
+                Servisin Quraşdırılması və Aktiv Edilməsi
+            </div>
+            <div class="question-content">
+                <p><span class="code">vsftpd</span> servisini quraşdırın və aşağıdakı tələblərə uyğun konfiqurasiya edin:</p>
+                <ul>
+                    <li>Servis hal-hazırda aktiv vəziyyətdə işləməlidir.</li>
+                    <li>Sistem yenidən işə düşdükdə servis avtomatik start etməlidir.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 4 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">4</span>
+                İstifadəçilər, Qruplar və Üzvlüklər
+            </div>
+            <div class="question-content">
+                <p>Sistemdə aşağıdakı istifadəçi və qrup konfiqurasiyasını yaradın. Əks göstəriş olmadıqda bütün istifadəçilərin şifrəsi eyni olmalıdır.</p>
+                <ul>
+                    <li><span class="code">teacher</span>, <span class="code">acf104</span> və <span class="code">acf105</span> adlı üç qrup yaradın.</li>
+                    <li><span class="code">mansura</span>, <span class="code">nazrin</span>, <span class="code">elmin</span> və <span class="code">fuad</span> adlı istifadəçiləri yaradın. Bu istifadəçilərin əsas qrupu <span class="code">teacher</span> olsun.</li>
+                    <li><span class="code">nazrin</span> və <span class="code">elmin</span> istifadəçilərini əlavə olaraq <span class="code">acf104</span> qrupuna üzv edin.</li>
+                    <li><span class="code">mansura</span> və <span class="code">fuad</span> istifadəçilərini əlavə olaraq <span class="code">acf105</span> qrupuna üzv edin.</li>
+                    <li><span class="code">khadija</span>, <span class="code">fidan</span>, <span class="code">jala</span> və <span class="code">ulkar</span> adlı istifadəçiləri yaradın və bu istifadəçilərin əsas qrupu <span class="code">acf104</span> olsun.</li>
+                    <li><span class="code">kifayat</span>, <span class="code">havva</span>, <span class="code">aysun</span> adlı istifadəçiləri yaradın və bu istifadəçilərin əsas qrupu <span class="code">acf105</span> olsun.</li>
+                    <li><span class="code">ornitorenk</span> adlı istifadəçi yaradın. Bu istifadəçinin:
+                        <ul>
+                            <li>interaktiv shell-ə giriş hüququ olmasın (məsələn, shell: <span class="code">/sbin/nologin</span>)</li>
+                            <li>yalnız öz adında olan qrupa üzv olsun (əsas qrupu <span class="code">ornitorenk</span> olsun)</li>
+                        </ul>
+                    </li>
+                    <li>Bütün istifadəçilərin şifrəsini <span class="code">gizlipass123</span> olaraq təyin edin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 5 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">5</span>
+                <span>grep və Yönləndirmə</span>
+            </div>
+            <div class="question-content">
+                <p>Adı saitlə başlayan bütün istifadəçilərin <span class="code">/etc/passwd</span> faylındakı sətirlərini tapın və nəticəni root istifadəçisinin ev direktoriyasında yerləşən <span class="code">saituser.txt</span> faylına yönləndirin.</p>
+                <div class="note">
+                    <strong>Qeyd:</strong> Sait hərflərə nümunə: a, ə, e, i, o, ö, u, ü.
+                </div>
+            </div>
+        </div>
+
+        <!-- Sual 6 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">6</span>
+                Xüsusi UID və GID ilə İstifadəçilər
+            </div>
+            <div class="question-content">
+                <p>Aşağıdakı parametrlərlə yeni istifadəçilər yaradın. Göstərilən UID və GID dəyərlərindən istifadə edin (lazım olarsa uyğun qrupları da yaradın).</p>
+                <ul>
+                    <li><span class="code">saleh</span> adlı istifadəçi:
+                        <ul>
+                            <li>UID: <span class="code">1888</span></li>
+                            <li>GID: <span class="code">8881</span></li>
+                        </ul>
+                    </li>
+                    <li><span class="code">nariman</span> adlı istifadəçi:
+                        <ul>
+                            <li>UID: <span class="code">1999</span></li>
+                            <li>GID: <span class="code">9991</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 7 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">7</span>
+                Tar Arxivi Yaradılması
+            </div>
+            <div class="question-content">
+                <p><span class="code">/var/log/messages</span> faylının <span class="code">tar.xz</span> arxivini yaradın və bu arxivi <span class="code">/root/exam.rhcsa.tar.xz</span> faylı kimi saxlayın.</p>
+            </div>
+        </div>
+
+        <!-- Sual 8 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">8</span>
+                Tuned Profilinin Ayarlanması
+            </div>
+            <div class="question-content">
+                <p>Tuned xidmətindən istifadə edərək, sistemdə yüksək performans üçün uyğun profili təyin edin.</p>
+                <ul>
+                    <li>Mövcud aktiv profili yoxlayın: <span class="code">tuned-adm active</span></li>
+                    <li>Mövcud profilləri siyahıya alın: <span class="code">tuned-adm list</span></li>
+                    <li>Aktiv profil kimi <span class="code">throughput-performance</span> profilini seçin.</li>
+                    <li>Profilin uğurla aktivləşdiyini yenidən yoxlayın.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 9 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">9</span>
+                Yeni Diskin Hazırlanması və Montajı
+            </div>
+            <div class="question-content">
+                <p>Sistemə əlavə olunmuş 15GB ölçüsündə SATA diski aşağıdakı tələblərə uyğun hazırlayın:</p>
+                <ul>
+                    <li>Diskdə <span class="code">GPT</span> partition cədvəli yaradın.</li>
+                    <li>Disk üzərində təqribən <span class="code">9G</span> ölçüsündə bir partition yaradın.</li>
+                    <li>Bu partition-u Red Hat üçün əsas fayl sistemi olan <span class="code">xfs</span> ilə format edin.</li>
+                    <li>Partition-u <span class="code">/mydata</span> direktoriyasına daimi (boot zamanı avtomatik) mount edin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 10 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">10</span>
+                SUID Bitinə Malik Faylların Tapılması
+            </div>
+            <div class="question-content">
+                <p>Sistemdə SUID biti təyin olunmuş bütün faylları tapın və nəticəni uzun formatda (long listing) göstərərək root istifadəçisinin ev direktoriyasında yerləşən <span class="code">suidfiles.txt</span> faylına yazdırın.</p>
+            </div>
+        </div>
+
+        <!-- Sual 11 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">11</span>
+                /etc/skel, find və Faylların Kopyalanması
+            </div>
+            <div class="question-content">
+                <p>Aşağıdakı tələbləri yerinə yetirin:</p>
+                <ul>
+                    <li>Gələcəkdə yaradılacaq bütün istifadəçilərin home direktoriyalarında <span class="code">welcome.sh</span> adlı fayl avtomatik yaransın. Bu faylın içində aşağıdakı mətn olsun:
+                        <div class="code">echo Welcome to the system</div>
+                        Faylın sahibi üçün icra (execute) icazəsi verin. (Məsələn, <span class="code">/etc/skel</span> vasitəsilə.)
+                    </li>
+                    <li><span class="code">intern</span> adlı yeni istifadəçi yaradın.</li>
+                    <li>Root istifadəçisi kimi, sahibi <span class="code">intern</span> olan və icra icazəsi olan bütün faylları tapın və onları <span class="code">/root/welcome/</span> direktoriyasına kopyalayın.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 12 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">12</span>
+                İstifadəçi Siyahısı və Tərsinə Yazılması
+            </div>
+            <div class="question-content">
+                <p>Aşağıdakı addımları yerinə yetirin:</p>
+                <ul>
+                    <li>Sistemdə mövcud olan bütün istifadəçilərin yalnız istifadəçi adlarını çıxarın və hər sətrdə bir ad olmaqla <span class="code">/tmp/users.txt</span> faylına yazdırın.</li>
+                    <li><span class="code">/tmp/users.txt</span> faylının məzmununu dəyişmədən saxlayın, lakin bu fayldakı istifadəçi adlarını aşağıdan yuxarı doğru (reverse sıra ilə) <span class="code">/tmp/reverseusers.txt</span> faylına yazdırın.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 13 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">13</span>
+                Cron – Audit Log-un Arxivləşdirilməsi
+            </div>
+            <div class="question-content">
+                <p>Root istifadəçisi üçün spesifik cron tapşırığı yaradın ki:</p>
+                <ul>
+                    <li>Hər həftə sonu (şənbə və bazar günləri) saat <span class="code">09:00</span>-da işə düşsün.</li>
+                    <li><span class="code">/var/log/audit/audit.log</span> faylının <span class="code">tar</span> arxivini yaradıb <span class="code">/root/arxiv/audit.tar</span> kimi saxlasın.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 14 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">14</span>
+                Cron – Hər Saatlıq Zaman Qeydi
+            </div>
+            <div class="question-content">
+                <p>Aşağıdakı tələblərə uyğun konfiqurasiya edin:</p>
+                <ul>
+                    <li><span class="code">/root/zaman.txt</span> faylına <span class="code">"1 saat daha keçdi"</span> mətnini yazan icra oluna bilən (executable) skript yaradın.</li>
+                    <li>Bu skriptin hər saat avtomatik işə düşməsini təmin edən cron tapşırığı yaradın.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 15 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">15</span>
+                Proses Prioritetinin Dəyişdirilməsi
+            </div>
+            <div class="question-content">
+                <p>Background-da çalışan bir <span class="code">dd</span> prosesi başladın və prosesi başladıqdən sonra onun prioritetini minimum resurs istifadə edəcək şəkildə tənzimləyin.</p>
+                <ul>
+                    <li><span class="code">dd</span> prosesini background-da işə salın.</li>
+                    <li>Prosesi işə saldıqdan sonra onun <span class="code">nice</span> dəyərini <span class="code">19</span> olaraq dəyişin (PR dəyəri təxminən <span class="code">39</span> olsun ki, proses sistem resurslarından minimal istifadə etsin).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 16 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">16</span>
+                Yeni İstifadəçilər üçün Non-Interactive Shell
+            </div>
+            <div class="question-content">
+                <p>Sistemi elə konfiqurasiya edin ki, bu andan sonra yaradılacaq bütün yeni istifadəçilər üçün default login shell interaktiv olmasın (məsələn, <span class="code">/sbin/nologin</span> və ya <span class="code">/bin/false</span> kimi).</p>
+            </div>
+        </div>
+
+        <!-- Sual 17 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">17</span>
+                /Public Direktoriyası üçün Silmə Məhdudiyyəti
+            </div>
+            <div class="question-content">
+                <p><span class="code">/Public</span> direktoriyasını yaradın və elə konfiqurasiya edin ki:</p>
+                <ul>
+                    <li>Bu direktoriyada bir neçə istifadəçi fayl yarada bilsin.</li>
+                    <li>Lakin hər bir faylı yalnız həmin faylın sahibi silə bilsin (digər istifadəçilər direktoriyada yazma icazəsi olsa belə başqasının faylını silə bilməsin).</li>
+                </ul>
+                <div class="note">
+                    <strong>Qeyd:</strong> Bu davranış adətən direktoriyada sticky bit istifadə etməklə təmin olunur.
+                </div>
+            </div>
+        </div>
+
+        <!-- Sual 18 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">18</span>
+                Qrup Sahibliyinin Avtomatik Təyini
+            </div>
+            <div class="question-content">
+                <p>Aşağıdakı direktoriyaları yaradın və qrup sahibliyini avtomatik idarə edin:</p>
+                <ul>
+                    <li><span class="code">/acf104</span> və <span class="code">/acf105</span> direktoriyalarını yaradın.</li>
+                    <li>Bu direktoriyaların qrup sahibliyini müvafiq olaraq <span class="code">acf104</span> və <span class="code">acf105</span> qruplarına təyin edin.</li>
+                    <li>Bu direktoriyalar daxilində yaradılan bütün fayl və direktoriyaların qrup sahibliyi avtomatik olaraq müvafiq direktoriyanın qrupuna aid olsun (setgid bitindən istifadə etməklə).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sual 19 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">19</span>
+                Yalnız Qovluqlara Rekursiv İcra İcazəsi
+            </div>
+            <div class="question-content">
+                <p>Verilən direktoriyada və onun bütün alt direktoriyalarında yalnız qovluqlara icra (execute) icazəsi əlavə edin. Həmin direktoriyalar daxilindəki faylların icazələrini dəyişməyin.</p>
+                <div class="note">
+                    <strong>Qeyd:</strong> Tapşırığın həlli üçün <span class="code">find</span> və ya <span class="code">chmod</span> alətlərindən uyğun şəkildə istifadə edə bilərsiniz.
+                </div>
+            </div>
+        </div>
+
+        <!-- Sual 20 -->
+        <div class="question-card">
+            <div class="question-title">
+                <span class="question-number">20</span>
+                Yeni Prosesin Nice Dəyəri ilə Başladılması
+            </div>
+            <div class="question-content">
+                <p>Yeni bir prosesi (istənilən uyğun komanda ola bilər) elə başladın ki, proses start anından etibarən <span class="code">nice</span> dəyəri <span class="code">10</span> olsun.</p>
+                <div class="note">
+                    <strong>Qeyd:</strong> Tapşırığın həlli üçün <span class="code">nice -n 10 &lt;komanda&gt;</span> formatından istifadə edilə bilər.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🎓 RHCSA Praktiki İmtahan Hazırlığı | Uğurlar!</p>
+        </div>
+    </div>
+</body>
+</html>
