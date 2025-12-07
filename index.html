@@ -159,13 +159,13 @@
                 Şəbəkə Konfiqurasiyası
             </div>
             <div class="question-content">
-                <p>Serverdə aşağıdakı parametrlərlə statik (manual) şəbəkə konfiqurasiyası aparın. Burada <span class="code">x.x.x</span> sizin NAT şəbəkənizin ilk üç oktetidir.</p>
+                <p>Serverdə aşağıdakı parametrlərlə statik (manual) şəbəkə konfiqurasiyası aparın.
                 <ul>
                     <li>Hostname: <span class="code">exam.rhcsa.local</span></li>
-                    <li>IP Address: <span class="code">x.x.x.199</span></li>
+                    <li>IP Address: <span class="code">192.168.100.199</span></li>
                     <li>Netmask: <span class="code">255.255.255.0</span></li>
-                    <li>Gateway: <span class="code">x.x.x.2</span></li>
-                    <li>Primary Nameserver: <span class="code">x.x.x.2</span></li>
+                    <li>Gateway: <span class="code">192.168.100.2</span></li>
+                    <li>Primary Nameserver: <span class="code">192.168.100.2</span></li>
                     <li>Secondary Nameserver: <span class="code">1.1.1.1</span></li>
                 </ul>
             </div>
@@ -178,10 +178,10 @@
                 Local Repository Yaradılması
             </div>
             <div class="question-content">
-                <p>Sistemdə aşağıdakı lokal YUM/DNF repository-ləri konfiqurasiya edin. Repository-lər daimi olaraq əlçatan olmalıdır (əgər disk və ya ISO istifadə olunursa, daimi mount təmin edin).</p>
+                <p>Sistemdə aşağıdakı lokal repository-ləri konfiqurasiya edin. Repository-lər daimi olaraq əlçatan olmalıdır.</p>
                 <ul>
-                    <li><span class="code">file:///Exam/Repo/BaseOS</span></li>
-                    <li><span class="code">file:///Exam/Repo/AppStream</span></li>
+                    <li><span class="code">/Exam/Repo/BaseOS</span></li>
+                    <li><span class="code">/Exam/Repo/AppStream</span></li>
                 </ul>
             </div>
         </div>
@@ -218,8 +218,8 @@
                     <li><span class="code">kifayat</span>, <span class="code">havva</span>, <span class="code">aysun</span> adlı istifadəçiləri yaradın və bu istifadəçilərin əsas qrupu <span class="code">acf105</span> olsun.</li>
                     <li><span class="code">ornitorenk</span> adlı istifadəçi yaradın. Bu istifadəçinin:
                         <ul>
-                            <li>interaktiv shell-ə giriş hüququ olmasın (məsələn, shell: <span class="code">/sbin/nologin</span>)</li>
-                            <li>yalnız öz adında olan qrupa üzv olsun (əsas qrupu <span class="code">ornitorenk</span> olsun)</li>
+                            <li>interaktiv shell-ə giriş hüququ olmasın </li>
+                            <li>yalnız öz adında olan qrupa üzv olsun </li>
                         </ul>
                     </li>
                     <li>Bütün istifadəçilərin şifrəsini <span class="code">gizlipass123</span> olaraq təyin edin.</li>
@@ -231,13 +231,11 @@
         <div class="question-card">
             <div class="question-title">
                 <span class="question-number">5</span>
-                <span>grep və Yönləndirmə</span>
+                <span>File edit and redirect</span>
             </div>
             <div class="question-content">
-                <p>Adı saitlə başlayan bütün istifadəçilərin <span class="code">/etc/passwd</span> faylındakı sətirlərini tapın və nəticəni root istifadəçisinin ev direktoriyasında yerləşən <span class="code">saituser.txt</span> faylına yönləndirin.</p>
-                <div class="note">
-                    <strong>Qeyd:</strong> Sait hərflərə nümunə: a, ə, e, i, o, ö, u, ü.
-                </div>
+                <p>Adı saitlə başlayan bütün istifadəçilərin <span class="code">/etc/passwd</span> faylındakı sətirlərini tapın və nəticəni root istifadəçisinin home direktoriyasında yerləşən <span class="code">saituser.txt</span> faylına yönləndirin.</p>
+
             </div>
         </div>
 
@@ -273,7 +271,7 @@
                 Tar Arxivi Yaradılması
             </div>
             <div class="question-content">
-                <p><span class="code">/var/log/messages</span> faylının <span class="code">tar.xz</span> arxivini yaradın və bu arxivi <span class="code">/root/exam.rhcsa.tar.xz</span> faylı kimi saxlayın.</p>
+                <p><span class="code">/var/log/messages</span> faylının "xz" ilə sıxlaşdırılmış arxivini yaradın və bu arxivi <span class="code">/root/exam.rhcsa.tar.xz</span> faylı kimi saxlayın.</p>
             </div>
         </div>
 
@@ -284,12 +282,9 @@
                 Tuned Profilinin Ayarlanması
             </div>
             <div class="question-content">
-                <p>Tuned xidmətindən istifadə edərək, sistemdə yüksək performans üçün uyğun profili təyin edin.</p>
+                <p>Tuned xidmətindən istifadə edərək, sistemdə yüksək performans üçün aşağıdaki profili təyin edin.</p>
                 <ul>
-                    <li>Mövcud aktiv profili yoxlayın: <span class="code">tuned-adm active</span></li>
-                    <li>Mövcud profilləri siyahıya alın: <span class="code">tuned-adm list</span></li>
                     <li>Aktiv profil kimi <span class="code">throughput-performance</span> profilini seçin.</li>
-                    <li>Profilin uğurla aktivləşdiyini yenidən yoxlayın.</li>
                 </ul>
             </div>
         </div>
@@ -326,17 +321,17 @@
         <div class="question-card">
             <div class="question-title">
                 <span class="question-number">11</span>
-                /etc/skel, find və Faylların Kopyalanması
+                File Search and File Copy
             </div>
             <div class="question-content">
                 <p>Aşağıdakı tələbləri yerinə yetirin:</p>
                 <ul>
                     <li>Gələcəkdə yaradılacaq bütün istifadəçilərin home direktoriyalarında <span class="code">welcome.sh</span> adlı fayl avtomatik yaransın. Bu faylın içində aşağıdakı mətn olsun:
                         <div class="code">echo Welcome to the system</div>
-                        Faylın sahibi üçün icra (execute) icazəsi verin. (Məsələn, <span class="code">/etc/skel</span> vasitəsilə.)
+                        Faylın sahibi üçün icra (execute) icazəsi verin.
                     </li>
                     <li><span class="code">intern</span> adlı yeni istifadəçi yaradın.</li>
-                    <li>Root istifadəçisi kimi, sahibi <span class="code">intern</span> olan və icra icazəsi olan bütün faylları tapın və onları <span class="code">/root/welcome/</span> direktoriyasına kopyalayın.</li>
+                    <li>Root istifadəçisi ilə, sahibi <span class="code">intern</span> olan və icra icazəsi olan bütün faylları tapın və onları <span class="code">/root/welcome/</span> direktoriyasına kopyalayın.</li>
                 </ul>
             </div>
         </div>
@@ -381,7 +376,7 @@
                 <p>Aşağıdakı tələblərə uyğun konfiqurasiya edin:</p>
                 <ul>
                     <li><span class="code">/root/zaman.txt</span> faylına <span class="code">"1 saat daha keçdi"</span> mətnini yazan icra oluna bilən (executable) skript yaradın.</li>
-                    <li>Bu skriptin hər saat avtomatik işə düşməsini təmin edən cron tapşırığı yaradın.</li>
+                    <li>Bu skriptin hər saat avtomatik işə düşməsini təmin edin.</li>
                 </ul>
             </div>
         </div>
@@ -396,7 +391,7 @@
                 <p>Background-da çalışan bir <span class="code">dd</span> prosesi başladın və prosesi başladıqdən sonra onun prioritetini minimum resurs istifadə edəcək şəkildə tənzimləyin.</p>
                 <ul>
                     <li><span class="code">dd</span> prosesini background-da işə salın.</li>
-                    <li>Prosesi işə saldıqdan sonra onun <span class="code">nice</span> dəyərini <span class="code">19</span> olaraq dəyişin (PR dəyəri təxminən <span class="code">39</span> olsun ki, proses sistem resurslarından minimal istifadə etsin).</li>
+                    <li>Prosesi işə saldıqdan sonra onun <span class="code">priority</span> dəyərini <span class="code">39</span> olaraq dəyişin .</li>
                 </ul>
             </div>
         </div>
@@ -408,7 +403,7 @@
                 Yeni İstifadəçilər üçün Non-Interactive Shell
             </div>
             <div class="question-content">
-                <p>Sistemi elə konfiqurasiya edin ki, bu andan sonra yaradılacaq bütün yeni istifadəçilər üçün default login shell interaktiv olmasın (məsələn, <span class="code">/sbin/nologin</span> və ya <span class="code">/bin/false</span> kimi).</p>
+                <p>Sistemi elə konfiqurasiya edin ki, bu andan sonra yaradılacaq bütün yeni istifadəçilər üçün default login shell interaktiv olmasın .</p>
             </div>
         </div>
 
@@ -421,12 +416,10 @@
             <div class="question-content">
                 <p><span class="code">/Public</span> direktoriyasını yaradın və elə konfiqurasiya edin ki:</p>
                 <ul>
-                    <li>Bu direktoriyada bir neçə istifadəçi fayl yarada bilsin.</li>
-                    <li>Lakin hər bir faylı yalnız həmin faylın sahibi silə bilsin (digər istifadəçilər direktoriyada yazma icazəsi olsa belə başqasının faylını silə bilməsin).</li>
+                    <li>Bu direktoriyada bütün istifadəçilər fayl yarada bilsin.</li>
+                    <li>Lakin hər bir faylı yalnız həmin faylın sahibi silə bilsin.</li>
                 </ul>
-                <div class="note">
-                    <strong>Qeyd:</strong> Bu davranış adətən direktoriyada sticky bit istifadə etməklə təmin olunur.
-                </div>
+               
             </div>
         </div>
 
@@ -441,7 +434,7 @@
                 <ul>
                     <li><span class="code">/acf104</span> və <span class="code">/acf105</span> direktoriyalarını yaradın.</li>
                     <li>Bu direktoriyaların qrup sahibliyini müvafiq olaraq <span class="code">acf104</span> və <span class="code">acf105</span> qruplarına təyin edin.</li>
-                    <li>Bu direktoriyalar daxilində yaradılan bütün fayl və direktoriyaların qrup sahibliyi avtomatik olaraq müvafiq direktoriyanın qrupuna aid olsun (setgid bitindən istifadə etməklə).</li>
+                    <li>Bu direktoriyalar daxilində yaradılan bütün fayl və direktoriyaların qrup sahibliyi avtomatik olaraq müvafiq direktoriyanın qrupuna aid olsun.</li>
                 </ul>
             </div>
         </div>
@@ -454,9 +447,7 @@
             </div>
             <div class="question-content">
                 <p>Verilən direktoriyada və onun bütün alt direktoriyalarında yalnız qovluqlara icra (execute) icazəsi əlavə edin. Həmin direktoriyalar daxilindəki faylların icazələrini dəyişməyin.</p>
-                <div class="note">
-                    <strong>Qeyd:</strong> Tapşırığın həlli üçün <span class="code">find</span> və ya <span class="code">chmod</span> alətlərindən uyğun şəkildə istifadə edə bilərsiniz.
-                </div>
+                
             </div>
         </div>
 
@@ -467,10 +458,8 @@
                 Yeni Prosesin Nice Dəyəri ilə Başladılması
             </div>
             <div class="question-content">
-                <p>Yeni bir prosesi (istənilən uyğun komanda ola bilər) elə başladın ki, proses start anından etibarən <span class="code">nice</span> dəyəri <span class="code">10</span> olsun.</p>
-                <div class="note">
-                    <strong>Qeyd:</strong> Tapşırığın həlli üçün <span class="code">nice -n 10 &lt;komanda&gt;</span> formatından istifadə edilə bilər.
-                </div>
+                <p>Yeni bir prosesi (sleep 36000) elə başladın ki, proses start anından etibarən <span class="code">nice</span> dəyəri <span class="code">10</span> olsun.</p>
+            
             </div>
         </div>
 
